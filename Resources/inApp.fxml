@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #d9f4da;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="StevenDLL.Controllers.inAppController">
+    <TabPane prefHeight="800.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab fx:id="dashboard_Tab" text="Dashboard">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <TitledPane animated="false" collapsible="false" layoutX="15.0" layoutY="15.0" prefHeight="745.0" prefWidth="970.0" text="Personal Information">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="968.0">
+                        <Label layoutX="12.0" layoutY="19.0" text="Firstname:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="559.0" layoutY="19.0" text="Lastname:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="67.0" text="Email Address:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="624.0" layoutY="67.0" text="Phone Number:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="12.0" layoutY="115.0" text="Membership Status:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="809.0" layoutY="19.0" text="Gender:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField editable="false" layoutX="101.0" layoutY="15.0" prefHeight="30.0" prefWidth="160.0" promptText="Firstname">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
+                        <TextField editable="false" layoutX="643.0" layoutY="15.0" prefHeight="30.0" prefWidth="160.0" promptText="Lastname">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
+                        <Label layoutX="273.0" layoutY="19.0" text="Middle Name:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField editable="false" layoutX="386.0" layoutY="15.0" prefHeight="30.0" prefWidth="160.0" promptText="Middle Name">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
+                        <TextField editable="false" layoutX="873.0" layoutY="15.0" prefHeight="30.0" prefWidth="80.0" promptText="Gender">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
+                        <TextField editable="false" layoutX="124.0" layoutY="63.0" prefHeight="30.0" prefWidth="490.0" promptText="Email Address">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
+                        <Label layoutX="415.0" layoutY="115.0" text="Employment Status:">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField editable="false" layoutX="745.0" layoutY="63.0" prefHeight="30.0" prefWidth="210.0" promptText="Phone Number">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
+                        <TextField editable="false" layoutX="171.0" layoutY="110.0" prefHeight="30.0" prefWidth="233.0" promptText="Membership Status">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
+                        <TextField editable="false" layoutX="577.0" layoutY="110.0" prefHeight="30.0" prefWidth="380.0" promptText="Employment Status">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </TextField>
+                      <ImageView fitHeight="215.0" fitWidth="209.0" layoutX="362.0" layoutY="253.0" pickOnBounds="true" preserveRatio="true">
+                          <Image url="@Images/photography.png" />
+                      </ImageView>
+                    </AnchorPane>
+                </TitledPane>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="inventory_Tab" text="Inventory">
+            <AnchorPane minHeight="0.0" minWidth="0.0" onMouseClicked="#clicked" prefHeight="180.0" prefWidth="200.0">
+                <TextField fx:id="search_TextField" layoutX="14.0" layoutY="15.0" prefHeight="40.0" prefWidth="740.0" promptText="Search Inventory...">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <ChoiceBox fx:id="search_ChoiceBox" layoutX="834.0" layoutY="15.0" prefHeight="40.0" prefWidth="150.0" />
+                <Label fx:id="filterBy_Label" layoutX="762.0" layoutY="20.0" text="Filter By">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="inventory_TableView" layoutY="66.0" prefHeight="630.0" prefWidth="1000.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="productID_TableColumn" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Product ID" />
+                        <TableColumn fx:id="title_TableColumn" editable="false" maxWidth="300.0" minWidth="300.0" prefWidth="300.0" text="Title" />
+                        <TableColumn fx:id="storeLocation_TableColumn" editable="false" maxWidth="240.0" minWidth="240.0" prefWidth="240.0" sortable="false" text="Store" />
+                  <TableColumn fx:id="aisleNumber_TableColumn" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Aisle Number" />
+                        <TableColumn fx:id="quantity_TableColumn" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Quantity" />
+                        <TableColumn fx:id="price_TableColumn" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="Price (USD)" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <Button fx:id="refresh_Button" layoutX="940.0" layoutY="66.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="R">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Button>
+                <Button fx:id="newItem_Button" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutY="696.0" mnemonicParsing="false" onMouseClicked="#newItemButton_Clicked" prefHeight="75.0" prefWidth="333.0" text="New Item" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Button>
+                <Button fx:id="removeSelected_Button" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="670.0" layoutY="696.0" mnemonicParsing="false" prefHeight="75.0" prefWidth="333.0" text="Remove Selected" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Button>
+            <Button fx:id="editSelected_Button" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="335.0" layoutY="696.0" mnemonicParsing="false" onMouseClicked="#newItemButton_Clicked" prefHeight="75.0" prefWidth="333.0" text="Edit Selected" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            </AnchorPane>
+        </Tab>
+        <Tab fx:id="settings_Tab" text="Settings">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        </Tab>
+    </TabPane>
+</AnchorPane>

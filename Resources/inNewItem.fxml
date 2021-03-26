@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #d9f4da;"
+            xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="StevenDLL.Controllers.inNewItem">
+    <children>
+        <TextArea fx:id="description_TextArea" layoutX="11.0" layoutY="205.0" prefHeight="330.0" prefWidth="580.0"
+                  promptText="Briefly describe your new product listing...">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </TextArea>
+        <TextField fx:id="productID_TextField" alignment="CENTER" editable="false" layoutX="12.0" layoutY="165.0"
+                   prefHeight="30.0" prefWidth="80.0" promptText="Product ID"/>
+        <TextField fx:id="title_TextField" alignment="CENTER" layoutX="102.0" layoutY="165.0" prefHeight="30.0"
+                   prefWidth="238.0" promptText="Title"/>
+        <TextField fx:id="location_TextField" alignment="CENTER" layoutX="349.0" layoutY="165.0" prefHeight="30.0"
+                   prefWidth="150.0" promptText="Location"/>
+        <TextField fx:id="quantity_TextField" alignment="CENTER" layoutX="509.0" layoutY="165.0" prefHeight="30.0"
+                   prefWidth="80.0" promptText="Quantity"/>
+        <Button fx:id="confirm_Button" layoutX="11.0" layoutY="542.0" mnemonicParsing="false" prefHeight="50.0"
+                prefWidth="580.0" text="Confirm">
+            <font>
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </Button>
+        <ImageView fx:id="logo_ImageView" fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="7.0"
+                   pickOnBounds="true" preserveRatio="true">
+            <Image url="@Images/browser.png"/>
+        </ImageView>
+    </children>
+</AnchorPane>
